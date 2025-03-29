@@ -3,11 +3,12 @@ import Filter from "./component/Filter";
 import Header from "./component/Header";
 import JobListing from "./component/JobListing";
 import Section from "./component/Section";
+import Error from "./component/Error";
 
 function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(function () {
     async function fetchData() {
@@ -17,9 +18,11 @@ function App() {
         if (!res.ok) throw new Error("Failed to fetch data");
         const data = await res.json();
         setData(data);
-        setError(null); // Clear any previous errors
+        setErrorMessage(null); // Clear any previous errors
       } catch (err) {
-        setError(err.message || "There was an error loading the data...");
+        setErrorMessage(
+          err.message || "There was an error loading the data..."
+        );
       } finally {
         setIsLoading(false);
       }
@@ -33,9 +36,13 @@ function App() {
       <Section>
         <Filter />
       </Section>
-      <Section>
-        <JobListing data={data} isLoading={isLoading} />
-      </Section>
+      {errorMessage ? (
+        <Error errorMessage={errorMessage} />
+      ) : (
+        <Section>
+          <JobListing data={data} isLoading={isLoading} />
+        </Section>
+      )}
     </>
   );
 }
