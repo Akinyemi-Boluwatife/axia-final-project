@@ -5,7 +5,6 @@ function JobListingItem({ data }) {
     new: isNew,
     featured,
     position,
-    role,
     level,
     postedAt,
     contract,

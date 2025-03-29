@@ -66,9 +66,6 @@ input {
 .filter ul li {
   list-style-type: none;
 }
-.filter ul li {
-  /* border: 2px solid green; */
-}
 .filt-res {
   display: flex;
   flex-wrap: wrap;
