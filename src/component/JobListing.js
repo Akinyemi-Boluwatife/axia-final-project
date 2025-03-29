@@ -1,7 +1,7 @@
 import JobListingItem from "./JobListingItem";
 
-function JobListing() {
-  const data = [
+function JobListing({ data, isLoading }) {
+  const dat3 = [
     {
       id: 1,
       company: "Photosnap",
