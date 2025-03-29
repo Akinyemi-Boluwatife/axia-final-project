@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch data/cities.json --port 9009 --delay 500"
+    "server": "json-server --watch server/data.json --port 9009"
   },
   "eslintConfig": {
     "extends": [
