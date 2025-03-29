@@ -1,13 +1,201 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-Desaturated-Dark-Cyan: hsl(180, 65%, 38%);
+  --primary-white: #fff;
+
+  --neutral-Light-Grayish-Cyan: hsl(180, 52%, 96%);
+  --neutral-Light-Grayish-Cyan: hsl(180, 31%, 95%);
+  --neutral-Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+  --neutral-Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  overflow: hidden;
+  background-color: var(--neutral-Light-Grayish-Cyan);
+}
+
+header {
+  height: 8rem;
+  background-color: var(--primary-Desaturated-Dark-Cyan);
+  background-image: url(../server/images/bg-header-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter {
+  color: var(--primary-Desaturated-Dark-Cyan);
+  background-color: var(--primary-white);
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  margin-top: -3rem;
+}
+.filt-res-clr-cnt {
+  display: flex;
+}
+.inp-btn-cont {
+  height: 2rem;
+  /* border: 2px solid green; */
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.inp-btn-cont button,
+input {
+  height: 100%;
+}
+.inp-btn-cont button {
+  all: unset;
+  border: 1px solid var(--primary-Desaturated-Dark-Cyan);
+  width: 4rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+/*  */
+.filter ul li {
+  list-style-type: none;
+}
+.filter ul li {
+  /* border: 2px solid green; */
+}
+.filt-res {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 80%;
+  /* border: 2px solid green; */
+}
+.filt-res-li {
+  display: flex;
+}
+.filt-res-li button {
+  all: unset;
+  font-size: 1rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-Desaturated-Dark-Cyan);
+  color: var(--primary-white);
+}
+.name-cont {
+  /* border: 2px solid blue; */
+  padding: 0.5rem;
+  color: var(--neutral-Very-Dark-Grayish-Cyan);
+  background-color: var(--neutral-Light-Grayish-Cyan);
+}
+.clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clear button {
+  all: unset;
+  padding: 0.5rem;
+  color: var(--neutral-Dark-Grayish-Cyan);
+}
+/* job listing */
+.data-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  list-style: none;
+  margin-top: 3rem;
+}
+
+/* data list */
+.data-list {
+  border-left: 5px solid var(--primary-Desaturated-Dark-Cyan);
+  padding: 1.5rem;
+  background-color: var(--primary-white);
+  border-radius: 8px;
+  width: 70%;
+  max-width: 20rem;
+  position: relative;
+}
+.img-cnt {
+  /* border: 2px solid green; */
+  width: 30px;
+}
+.img-cnt img {
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+.img-cnt {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid green; */
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  position: absolute;
+  top: -15px;
+}
+.grn-clr {
+  color: var(--primary-Desaturated-Dark-Cyan);
+}
+.bd-grn-wht {
+  background-color: var(--primary-Desaturated-Dark-Cyan);
+  color: var(--primary-white);
+  padding: 0.3rem;
+  border-radius: 6px;
+}
+.bd-blc-wht {
+  background-color: black;
+  color: var(--primary-white);
+  padding: 0.3rem;
+  border-radius: 6px;
+}
+.bd-spac {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+.mrg {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.pst {
+  font-weight: 600;
+}
+.pst-at {
+  color: var(--neutral-Dark-Grayish-Cyan);
+}
+hr {
+  margin: 0.4rem;
+}
+.dv-mrg {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.lng,
+.tool {
+  background-color: var(--primary-Desaturated-Dark-Cyan);
+  color: var(--primary-white);
+  padding: 0.3rem;
+  border-radius: 6px;
+  margin: 0.3rem;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
 }
