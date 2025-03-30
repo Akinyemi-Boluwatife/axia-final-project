@@ -8,6 +8,7 @@ function Filter({ setFilterWord, handleAddSearch, filterWord, searchWords }) {
   }
   function handleClear(e) {
     e.preventDefault();
+    setFilterWord("");
   }
 
   console.log(searchWords);
@@ -30,9 +31,11 @@ function Filter({ setFilterWord, handleAddSearch, filterWord, searchWords }) {
               <FilterItem key={i} res={res} />
             ))}
           </ul>
-          <div className="clear">
-            <button onClick={handleClear}>Clear</button>
-          </div>
+          {filterWord ? (
+            <div className="clear">
+              <button onClick={handleClear}>Clear</button>
+            </div>
+          ) : null}
         </div>
       </form>
     </section>
