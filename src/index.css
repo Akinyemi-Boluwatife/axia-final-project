@@ -137,7 +137,6 @@ input {
 .img-cnt {
   display: flex;
   align-items: center;
-  /* border: 2px solid green; */
   width: 30px;
   height: 30px;
   justify-content: center;
@@ -216,7 +215,6 @@ hr {
     height: 80px;
   }
   .img-cnt {
-    /* border: 2px solid green; */
     width: 80px;
     height: 80px;
     position: static;
@@ -229,6 +227,7 @@ hr {
   }
   hr {
     display: none;
+    /* not needed again */
   }
   .skills {
     display: flex;

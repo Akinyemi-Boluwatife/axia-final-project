@@ -1,6 +1,12 @@
 import FilterItem from "./FilterItem";
 
-function Filter({ setFilterWord, handleAddSearch, filterWord, searchWords }) {
+function Filter({
+  setFilterWord,
+  handleAddSearch,
+  filterWord,
+  searchWords,
+  setSearchWords,
+}) {
   function handleClick(e) {
     e.preventDefault();
     handleAddSearch(filterWord);
@@ -9,6 +15,7 @@ function Filter({ setFilterWord, handleAddSearch, filterWord, searchWords }) {
   function handleClear(e) {
     e.preventDefault();
     setFilterWord("");
+    setSearchWords([]);
   }
 
   console.log(searchWords);

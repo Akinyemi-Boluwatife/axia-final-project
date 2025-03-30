@@ -54,6 +54,7 @@ function App() {
           filterWord={filterWord}
           setFilterWord={setFilterWord}
           searchWords={searchWords}
+          setSearchWords={setSearchWords}
         />
       </Section>
       {errorMessage ? (
