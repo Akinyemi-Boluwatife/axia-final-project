@@ -6,6 +6,9 @@ function Filter({ setFilterWord, handleAddSearch, filterWord, searchWords }) {
     handleAddSearch(filterWord);
     setFilterWord("");
   }
+  function handleClear(e) {
+    e.preventDefault();
+  }
 
   console.log(searchWords);
   return (
@@ -28,7 +31,7 @@ function Filter({ setFilterWord, handleAddSearch, filterWord, searchWords }) {
             ))}
           </ul>
           <div className="clear">
-            <button>Clear</button>
+            <button onClick={handleClear}>Clear</button>
           </div>
         </div>
       </form>

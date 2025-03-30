@@ -119,8 +119,8 @@ input {
   padding: 1.5rem;
   background-color: var(--primary-white);
   border-radius: 8px;
-  width: 70%;
-  max-width: 20rem;
+  width: 80%;
+  max-width: 42rem;
   position: relative;
 }
 .img-cnt {
@@ -204,4 +204,26 @@ hr {
   justify-content: center;
   align-items: center;
   font-size: 40px;
+}
+/* responsiveness */
+@media (min-width: 568px) {
+  .data-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .img-cnt img {
+    width: 80px;
+    height: 80px;
+  }
+  .img-cnt {
+    /* border: 2px solid green; */
+    width: 80px;
+    height: 80px;
+    position: static;
+  }
+  .img-info-cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }

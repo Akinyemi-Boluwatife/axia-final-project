@@ -15,28 +15,31 @@ function JobListingItem({ data }) {
 
   return (
     <li className="data-list">
-      <div className="img-cnt">
-        <img src={logo} alt="dhdhd" />
-      </div>
-      <div className="dv-mrg">
-        <div className="bd-spac">
-          <p>
-            <span className="grn-clr">{company}</span>
-          </p>
-
-          <div className="mrg">
-            <span className="bd-grn-wht">{isNew && "NEW!"}</span>
-            <span className="bd-blc-wht"> {featured && "FEATURED"} </span>
-          </div>
+      <div className="img-info-cont">
+        <div className="img-cnt">
+          <img src={logo} alt="dhdhd" />
         </div>
+        <div className="dv-mrg">
+          <div className="bd-spac">
+            <p>
+              <span className="grn-clr">{company}</span>
+            </p>
 
-        <p className="pst"> {position} </p>
+            <div className="mrg">
+              <span className="bd-grn-wht">{isNew && "NEW!"}</span>
+              <span className="bd-blc-wht"> {featured && "FEATURED"} </span>
+            </div>
+          </div>
 
-        <p className="pst-at">
-          {postedAt}. •{contract} •{location}
-        </p>
-        <hr />
+          <p className="pst"> {position} </p>
+
+          <p className="pst-at">
+            {postedAt}. •{contract} •{location}
+          </p>
+          <hr />
+        </div>
       </div>
+
       <div>
         <div className="skills">
           {<span className="tool">{level}</span>}
