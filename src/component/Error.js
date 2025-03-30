@@ -1,6 +1,6 @@
 function Error({ errorMessage }) {
   return (
-    <div className="error">{errorMessage || " What is going on here"}</div>
+    <div className="error">{errorMessage || " Unable to load data..."}</div>
   );
 }
 
