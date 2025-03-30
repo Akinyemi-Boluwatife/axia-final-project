@@ -20,7 +20,7 @@ function Filter({
 
   console.log(searchWords);
   return (
-    <section className="filter">
+    <div className="filter">
       <form>
         <div className="inp-btn-cont">
           <input
@@ -45,7 +45,7 @@ function Filter({
           ) : null}
         </div>
       </form>
-    </section>
+    </div>
   );
 }
 
