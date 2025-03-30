@@ -12,8 +12,7 @@ function JobListingItem({ data }) {
     languages,
     tools,
   } = data;
-  //   const { languages } = data;
-  console.log(languages);
+
   return (
     <li className="data-list">
       <div className="img-cnt">

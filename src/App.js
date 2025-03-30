@@ -9,6 +9,8 @@ function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [filterWord, setFilterWord] = useState("");
+  const [searchWords, setSearchWords] = useState([]);
 
   useEffect(function () {
     async function fetchData() {
@@ -30,17 +32,35 @@ function App() {
     fetchData();
   }, []);
 
+  const searchedPosts =
+    filterWord.length > 0
+      ? data.filter((data) =>
+          `${data.position} ${data.role} ${data.company} ${data.languages}`
+            .toLowerCase()
+            .includes(filterWord.toLowerCase())
+        )
+      : data;
+
+  function handleAddSearch(newWord) {
+    setSearchWords((word) => [...word, { name: newWord }]);
+  }
+
   return (
     <>
       <Header />
       <Section>
-        <Filter />
+        <Filter
+          handleAddSearch={handleAddSearch}
+          filterWord={filterWord}
+          setFilterWord={setFilterWord}
+          searchWords={searchWords}
+        />
       </Section>
       {errorMessage ? (
         <Error errorMessage={errorMessage} />
       ) : (
         <Section>
-          <JobListing data={data} isLoading={isLoading} />
+          <JobListing data={searchedPosts} isLoading={isLoading} />
         </Section>
       )}
     </>
